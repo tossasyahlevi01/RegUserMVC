@@ -1,4 +1,5 @@
 ﻿using MasterRegUser.Models;
+using MasterRegUser.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MasterRegUser.Controllers
@@ -8,6 +9,12 @@ namespace MasterRegUser.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        private IUser _User { get; set; }
+        public MasterRegController(IUser User)
+        {
+            _User = User;
         }
 
         [ActionName("Login")]
@@ -26,6 +33,67 @@ namespace MasterRegUser.Controllers
                 }
                 else
                 {
+                    var Data = await _User.GetLogin(Entity);
+                    if(Data.Error==true)
+                    {
+                        var Return = new GeneralResponses()
+                        {
+                            Error = Data.Error,
+                            Message = Data.Data.Message
+                        };
+                        return Ok(Return);
+
+                    }
+                    else
+                    {
+                        var Return = new GeneralResponses()
+                        {
+                            Error = false,
+                            Message = "OK"
+                        };
+                        return Ok(Return);
+                    }
+                
+                }
+            }
+            catch(Exception ex)
+            {
+                var Return = new GeneralResponses()
+                {
+                    Error = true,
+                    Message = ex.Message
+                };
+                return BadRequest(Return);
+            }
+        }
+
+        [ActionName("RegisterAccount")]
+        public async Task<IActionResult> RegisterAccount([FromBody] RegisterAccountDTO Entity)
+        {
+            try
+            {
+                if(Entity.Passwords!= Entity.RePassword)
+                {
+                    var Return = new GeneralResponses()
+                    {
+                        Error = true,
+                        Message = "Password Doesn't Match"
+                    };
+                    return BadRequest(Return);
+                }
+
+                if (String.IsNullOrEmpty(Entity.NumberPhone) || String.IsNullOrEmpty(Entity.EmailAddress) ||
+                     String.IsNullOrEmpty(Entity.Passwords))
+                {
+                    var Return = new GeneralResponses()
+                    {
+                        Error = true,
+                        Message = "You Must Enter Registration Field Input"
+                    };
+                    return BadRequest(Return);
+                }
+                else
+                {
                     var Return = new GeneralResponses()
                     {
                         Error = false,
@@ -34,7 +102,7 @@ namespace MasterRegUser.Controllers
                     return Ok(Return);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 var Return = new GeneralResponses()
                 {
@@ -50,5 +118,5 @@ namespace MasterRegUser.Controllers
 
     }
 
-    
+
 }

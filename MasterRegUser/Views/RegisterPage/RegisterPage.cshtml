@@ -27,6 +27,12 @@
                     </li>
                     <hr />
                     <li>
+                        <label> Full Name</label>
+                    </li>
+                    <li>
+                        <input type="text" autocomplete="off" id="txtFullName" class="form-control" />
+                    </li>
+                    <li>
                         <label> Email</label>
                     </li>
                     <li>
@@ -54,7 +60,18 @@
                         <label> Nationality</label>
                     </li>
                     <li>
-                        <input type="text" autocomplete="off" id="txtNationality" class="form-control" />
+                        <select id="dpNationality" class="form-control">
+                            <option value="Indonesian">Indonesian</option>
+                            <option value="Malaysian">Malaysian</option>
+                            <option value="Singaporean">Singaporean</option>
+                            <option value="Indian">Indian</option>
+                            <option value="USA">USA</option>
+                            <option value="Other">Other</option>
+
+                        </select>
+                    </li>
+                    <li>
+                        <input type="text" autocomplete="off"  id="txtNationality" placeholder="Please Fill Your Nationality" class="form-control" />
                     </li>
                     <li>
                         <button type="button" id="btnSubmitAccount" class="btn btn-primary"><i class="fa fa-key">Submit New Account</i></button>
@@ -71,6 +88,12 @@
 </html>
 <script>
     $(document).ready(function () {
+        var Nation = document.getElementById('txtNationality');
+        Nation.style.display = 'none';
+        $("#dpNationality").on("change", function () {
+            CekDPNationality();
+        });
+       
         $("#btnLogin").click(function () {
             open("/MasterReg/LoginPage/LoginPage", "_self");
 

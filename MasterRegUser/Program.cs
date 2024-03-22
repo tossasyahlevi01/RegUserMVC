@@ -1,6 +1,10 @@
+using MasterRegUser.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddScoped<IUser, UserService>();
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
