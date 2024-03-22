@@ -6,6 +6,7 @@ namespace MasterRegUser.Services
     {
         public Task<(bool Error, GeneralResponses Data)> GetLogin(RequestlOGINDTO Entity);
         public Task<(bool Error, GeneralResponses Data)> RegisterAccount(RegisterAccountDTO Entity);
+        public Task<(bool Error, GeneralResponses Data)> GetGridUser(string Email);
 
     }
 }

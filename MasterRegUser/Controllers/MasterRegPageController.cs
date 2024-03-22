@@ -25,5 +25,12 @@ namespace MasterRegUser.Controllers
             return View("~/Views/RegisterPage/RegisterAccount.cshtml");
             //return View("~/Views/EMM/MMRequest.cshtml");
         }
+        public ActionResult DetailPage()
+        {
+            ViewData["Title"] = "DetailPage";
+            ViewData["Controller"] = "MasterRegController";
+            return View("~/Views/DetailPage/DetailPage.cshtml");
+            //return View("~/Views/EMM/MMRequest.cshtml");
+        }
     }
 }

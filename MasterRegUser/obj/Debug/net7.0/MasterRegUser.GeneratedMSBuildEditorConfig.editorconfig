@@ -18,12 +18,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Project\MasterRegUserMVC\MasterRegUser
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Project/MasterRegUserMVC/MasterRegUser/Views/LoginPage/LoginPage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5QYWdlXExvZ2luUGFnZS5jc2h0bWw=
+[D:/Project/MasterRegUserMVC/MasterRegUser/Views/DetailPage/DetailPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWlsUGFnZVxEZXRhaWxQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project/MasterRegUserMVC/MasterRegUser/Views/RegisterPage/RegisterAccount.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJQYWdlXFJlZ2lzdGVyQWNjb3VudC5jc2h0bWw=
+[D:/Project/MasterRegUserMVC/MasterRegUser/Views/LoginPage/LoginPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5QYWdlXExvZ2luUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Project/MasterRegUserMVC/MasterRegUser/Views/RegisterPage/RegisterPage.cshtml]

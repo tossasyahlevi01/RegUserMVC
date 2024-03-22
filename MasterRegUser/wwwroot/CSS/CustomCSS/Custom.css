@@ -45,3 +45,10 @@ img{height:100%; width:100%;}
 li{
     list-style:none;
 }
+
+.Header{
+    padding:10px;
+    width:100%;
+    background-color:rgb(194, 39, 28);
+    color:white;
+}

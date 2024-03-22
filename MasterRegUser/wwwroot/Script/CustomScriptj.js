@@ -16,7 +16,7 @@
        
         success: function (data) {
             if (data.error === false) {
-                open("/MasterReg/RegisterPage/RegisterAccount", "_self");
+                open("/MasterReg/DetailPage/DetailPage", "_self");
             }
             else {
                 console.log(data);
@@ -31,6 +31,129 @@
     });
 }
 
+function GetSession()
+{
+    $.ajax({
+        async: false,
+        type: "GET",
+        url: '/MasterReg/GetSession',
+        data:null,
+        //accepts: "application/json",
+        //contentType: "application/json",
+
+        success: function (data) {
+            if (data.error === false) {
+                $("#lbEmail").text(data.message);
+            }
+            else {
+                console.log(data);
+                alert(data.message);
+                open("/MasterReg/LoginPage/LoginPage", "_self");
+
+            }
+        },
+        error: function (data) {
+            console.log(data);
+            alert(data.responseJSON.message);
+        }
+
+    });
+}
+
+function GetGridUser() {
+    $.ajax({
+        async: false,
+        type: "GET",
+        url: '/MasterReg/GetGridUser',
+        data: null,
+      
+        success: function (data) {
+
+            if (data.error === false) {
+                $('#tbUser').DataTable({
+                    "bDestroy": true,
+                    "bFilter": false,
+                    paging: true,
+                    bAutoWidth: false,
+                    // scrollCollapse: true,
+                    //scrollY: '500em',
+                    //ordering: true,
+                    searching: true,
+                    data: data.data.listUser,
+                    columns: [
+
+   
+                        {
+                           title: 'User Number', data: 'userNumber'
+                         
+                        },
+                        {
+                            title: 'Name', data: 'personalName'
+
+                        },
+                        {
+                            title: 'Email', data: 'emailAddress'
+                        },
+                        {
+                            title: 'Passwords', data: 'passwords'
+                        },
+                      
+                        {
+                            title: 'Number Phone', data: 'numberPhone'
+                        },
+                     
+                        {
+                            title: 'Nationality', data: 'nationality'
+                        },
+                  
+                        {
+                            title: 'Join Date', data: 'joinDated'
+                        }
+                        
+
+                    ]
+
+                });
+
+            }
+            else {
+                alert("Service Error " + data.message);
+            }
+        },
+        error: function (e) {
+            alert("Service Error : " + e.responseJSON.message);
+            console.log(e);
+        },
+  
+    });
+
+}
+
+function LogOut() {
+    $.ajax({
+        async: false,
+        type: "GET",
+        url: '/MasterReg/LogOut',
+        data: null,
+        //accepts: "application/json",
+        //contentType: "application/json",
+
+        success: function (data) {
+            if (data.error === false) {
+                open("/MasterReg/LoginPage/LoginPage", "_self");
+            }
+            else {
+                console.log(data);
+                alert(data.message);
+            }
+        },
+        error: function (data) {
+            console.log(data);
+            alert(data.responseJSON.message);
+        }
+
+    });
+}
 function Register() {
     let Email = $("#txtEmail").val();
     let Pass = $("#txtpass").val();

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - Document Management System</title>
+    <link href="~/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="~/css/bootstrap.css" type="text/css" rel="stylesheet" />
+    <link href="~/css/font-awesome.css" type="text/css" rel="stylesheet" />
+    <link href="~/css/customcss/custom.css" type="text/css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" />
+    <script src="~/script/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="~/script/customscriptj.js"></script>
+</head>
+<body>
+    <div id="Wrapper">
+        <div class="Header">
+            <h3> Welcome, </h3> <label id="lbEmail"></label>
+            <br />
+            <button type="button" id="btnLogout" class="btn btn-danger">Log Out</button>
+        </div>
+    <div class="Table-Content">
+        <table id="tbUser" class="table table-striped-columns">
+          @*   <th>UserNumber</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Number Phone</th>
+            <th>Nationality</th>
+                <th>Join Dated</th> *@
+
+            <tbody>
+            </tbody>
+        </table>
+
+    </div>
+    </div>
+    </body>
+    </html>
+    <script>
+        $(document).ready(function () {
+            GetSession();
+            GetGridUser();
+        $("#btnLogout").click(function () {
+            LogOut();
+        });
+
+        });
+    </script>
