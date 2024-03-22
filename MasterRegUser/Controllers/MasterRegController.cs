@@ -48,8 +48,8 @@ namespace MasterRegUser.Controllers
                     {
                         var Return = new GeneralResponses()
                         {
-                            Error = false,
-                            Message = "OK"
+                            Error = Data.Error,
+                            Message = Data.Data.Message
                         };
                         return Ok(Return);
                     }
@@ -67,20 +67,12 @@ namespace MasterRegUser.Controllers
             }
         }
 
-        [ActionName("RegisterAccount")]
-        public async Task<IActionResult> RegisterAccount([FromBody] RegisterAccountDTO Entity)
+        [ActionName("RegisterAccounts")]
+        public async Task<IActionResult> RegisterAccounts([FromBody] RegisterAccountDTO Entity)
         {
             try
             {
-                if(Entity.Passwords!= Entity.RePassword)
-                {
-                    var Return = new GeneralResponses()
-                    {
-                        Error = true,
-                        Message = "Password Doesn't Match"
-                    };
-                    return BadRequest(Return);
-                }
+                
 
                 if (String.IsNullOrEmpty(Entity.NumberPhone) || String.IsNullOrEmpty(Entity.EmailAddress) ||
                      String.IsNullOrEmpty(Entity.Passwords))
@@ -94,12 +86,26 @@ namespace MasterRegUser.Controllers
                 }
                 else
                 {
-                    var Return = new GeneralResponses()
+                    var Data = await _User.RegisterAccount(Entity);
+                    if(Data.Error==true)
                     {
-                        Error = false,
-                        Message = "OK"
-                    };
-                    return Ok(Return);
+                        var Return = new GeneralResponses()
+                        {
+                            Error = Data.Error,
+                            Message = Data.Data.Message
+                        };
+                        return BadRequest(Return);
+                    }
+                    else
+                    {
+                        var Return = new GeneralResponses()
+                        {
+                            Error = false,
+                            Message = Data.Data.Message
+                        };
+                        return Ok(Return);
+                    }
+                  
                 }
             }
             catch (Exception ex)

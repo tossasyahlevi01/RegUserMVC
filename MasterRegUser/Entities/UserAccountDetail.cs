@@ -6,5 +6,6 @@
         public string NumberPhone { get; set; }
         public string Nationality { get; set; }
         public string UserNumber { get; set; }
+        public string FullName { get; set; }
     }
 }

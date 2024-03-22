@@ -44,8 +44,9 @@ function Register() {
 
     let DataObject =
     {
-        Email: Email,
-        Password: Pass,
+        EmailAddress: Email,
+        FullName:Name,
+        Passwords: Pass,
         RePassword: RePass,
         dpNationality: dpNation,
         txtNationality: txtNation,
@@ -54,7 +55,7 @@ function Register() {
     $.ajax({
         async: false,
         type: "POST",
-        url: '/MasterReg/RegisterAccount',
+        url: '/MasterReg/RegisterAccounts',
         data: JSON.stringify(DataObject),
         accepts: "application/json",
         contentType: "application/json",
