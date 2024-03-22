@@ -1,0 +1,73 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Project\\MasterRegUserMVC\\MasterRegUser\\wwwroot\\CSS\\CustomCSS\\Custom.css",
+      "PackagePath": "staticwebassets\\CSS\\CustomCSS\\Custom.css"
+    },
+    {
+      "Id": "D:\\Project\\MasterRegUserMVC\\MasterRegUser\\wwwroot\\CSS\\bootstrap-datepicker.css",
+      "PackagePath": "staticwebassets\\CSS\\bootstrap-datepicker.css"
+    },
+    {
+      "Id": "D:\\Project\\MasterRegUserMVC\\MasterRegUser\\wwwroot\\CSS\\bootstrap-table-fixed-columns.css",
+      "PackagePath": "staticwebassets\\CSS\\bootstrap-table-fixed-columns.css"
+    },
+    {
+      "Id": "D:\\Project\\MasterRegUserMVC\\MasterRegUser\\wwwroot\\CSS\\bootstrap-table.css",
+      "PackagePath": "staticwebassets\\CSS\\bootstrap-table.css"
+    },
+    {
+      "Id": "D:\\Project\\MasterRegUserMVC\\MasterRegUser\\wwwroot\\CSS\\bootstrap-timepicker.css",
+      "PackagePath": "staticwebassets\\CSS\\bootstrap-timepicker.css"
+    },
+    {
+      "Id": "D:\\Project\\MasterRegUserMVC\\MasterRegUser\\wwwroot\\CSS\\bootstrap.css",
+      "PackagePath": "staticwebassets\\CSS\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Project\\MasterRegUserMVC\\MasterRegUser\\wwwroot\\CSS\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\CSS\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Project\\MasterRegUserMVC\\MasterRegUser\\wwwroot\\CSS\\font-awesome.css",
+      "PackagePath": "staticwebassets\\CSS\\font-awesome.css"
+    },
+    {
+      "Id": "D:\\Project\\MasterRegUserMVC\\MasterRegUser\\wwwroot\\Image\\Registration-and-stamp-duty-fees-12.jpg",
+      "PackagePath": "staticwebassets\\Image\\Registration-and-stamp-duty-fees-12.jpg"
+    },
+    {
+      "Id": "D:\\Project\\MasterRegUserMVC\\MasterRegUser\\wwwroot\\Image\\shop.jpg",
+      "PackagePath": "staticwebassets\\Image\\shop.jpg"
+    },
+    {
+      "Id": "D:\\Project\\MasterRegUserMVC\\MasterRegUser\\wwwroot\\Image\\ts61hf08szppzlocznxew.png",
+      "PackagePath": "staticwebassets\\Image\\ts61hf08szppzlocznxew.png"
+    },
+    {
+      "Id": "D:\\Project\\MasterRegUserMVC\\MasterRegUser\\wwwroot\\Script\\CustomScriptj.js",
+      "PackagePath": "staticwebassets\\Script\\CustomScriptj.js"
+    },
+    {
+      "Id": "D:\\Project\\MasterRegUserMVC\\MasterRegUser\\wwwroot\\Script\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\Script\\jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.MasterRegUser.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.MasterRegUser.props",
+      "PackagePath": "build\\MasterRegUser.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.MasterRegUser.props",
+      "PackagePath": "buildMultiTargeting\\MasterRegUser.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.MasterRegUser.props",
+      "PackagePath": "buildTransitive\\MasterRegUser.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

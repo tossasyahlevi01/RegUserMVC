@@ -6,4 +6,32 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Image\" />
+    <Folder Include="Insfrastructures\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\CSS\bootstrap-datepicker.css" />
+    <None Include="wwwroot\CSS\bootstrap-table-fixed-columns.css" />
+    <None Include="wwwroot\CSS\bootstrap-table.css" />
+    <None Include="wwwroot\CSS\bootstrap-timepicker.css" />
+    <None Include="wwwroot\CSS\bootstrap.css" />
+    <None Include="wwwroot\CSS\bootstrap.min.css" />
+    <None Include="wwwroot\CSS\font-awesome.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Twitter.Bootstrap.MVC" Version="2.1.6" />
+  </ItemGroup>
+
 </Project>
