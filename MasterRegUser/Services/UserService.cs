@@ -33,7 +33,7 @@ namespace MasterRegUser.Services
                 else
                 {
 
-                    var Uid = new Guid();
+                    Guid Uid = Guid.NewGuid();
 
                     var DataUser = new UserAccount()
                 {
